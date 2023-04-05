@@ -85,11 +85,43 @@
     font-size: 12px;
     font-weight: bold;
 }
+/* ****slides**** */
+.foodSlides {
+  background-color: black;
+  width: 100%;
+  /* height: 300px; */
+  margin-top: 6%;
+}
+.foodSlides>div{
+  width: 95%;
+  margin: auto;
+  /* border: 1px solid #ff9615; */
+  display: flex;
+  justify-content: space-between;
+}
+.foodSlides>div>div{
+  align-self: center;
+  /* border: 2px solid white; */
+  width: 22%;
+  /* padding-top: 3.5%; */
+  padding-top: 40px;
+  padding-bottom: 35px; 
+  overflow: hidden;
+}
+.foodSlides>div>div>img:hover{
+  cursor: pointer;
+  scale: 1.1;
+  transition: 0.5s;
+}
+.foodSlides>div>div>img {
+  width: 100%;
+  padding: 10px;
+}
 .content {
     width: 100%;
     /* height: 1000px; */
-    border: 2px solid blue;
-    margin-top: 10%;
+    /* border: 2px solid blue; */
+    margin-top: 3%;
 }
 .content>div:nth-child(1){
     display: flex;
@@ -131,7 +163,7 @@
     margin-left: 10px;
 }
 .restaurants {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     width: 98%;
     margin: auto;
     margin-top: 2%;
@@ -141,13 +173,16 @@
     padding-bottom: 2%;
 }
 .restaurants>div {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 23%;
-    height: 380px;
+    /* height: 380px; */
     margin-bottom: 4%;
 }
+.restaurants>div:hover {
+  border: 1px solid black;
+}
 .restaurants>div>div:nth-child(1){
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     width: 90%;
     margin: auto;
     margin-top: 5%;
@@ -155,10 +190,69 @@
 .restaurants>div>div:nth-child(1)>img {
     width: 100%;
 }
-
-
-
-
+.restaurants>div>div:nth-child(1)>h3 {
+  margin-top: 3%;
+}
+.restaurants>div>div:nth-child(1)>p{
+  font-size: 14px;
+  color: rgb(99, 99, 99);
+  margin-top: 1%;
+}
+.rating {
+  display: flex;
+  margin-top: 4%;
+  font-size: 0.8em;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 4%;
+  border-bottom: 1px solid gray;
+}
+.rating>:nth-child(even) {
+  font-size: 3px;
+}
+.rating>div:nth-child(1){
+  display: flex;
+  background-color: rgb(0, 205, 0);
+  color: white;
+  padding: 2px;
+  width: 43px;
+  font-size: 12px;
+  font-weight: bold;
+  justify-content: space-around;
+}
+.discount {
+  color: brown;
+  display: flex;
+  margin-top: 4%;
+  align-self: center;
+  padding-bottom: 4%;
+  border-bottom: 1px solid gray;
+}
+.discount>i{
+  font-size: 0.6em;
+  padding: 5px;
+  width: 19px;
+  border-radius: 15px;
+  margin-right: 5px;
+  color: white;
+  background-color: brown;
+  text-align: center;
+}
+.discount>p {
+  font-size: 0.9em;
+}
+.qView {
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 0px 10px 0px;
+  color: rgb(122, 122, 220);
+  font-size: 15px;
+  display: none;
+}
+/* .restaurants div:hover + .qView{
+  display: block;
+  cursor: pointer;
+} */
 
 
 
