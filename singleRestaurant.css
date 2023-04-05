@@ -6,7 +6,7 @@
 }
 .Homepage {
   width: 100%;
-  height: 2000px;
+  /* height: 2000px; */
 }
 .navBar {
   width: 100%;
@@ -16,6 +16,7 @@
   background-color: white;
   position: fixed;
   top: 0;
+  z-index: 1;
   align-items: center;
   justify-content: space-between;
 }
@@ -83,12 +84,303 @@
   font-size: 12px;
   font-weight: bold;
 }
+.browseMenu{
+  border: none;
+  outline: none;
+  background-color: #5d8ed5;
+  color: white;
+  position: fixed;
+  margin-top: 34%;
+  margin-left: 45%;
+  display: flex;
+  width: 12%;
+  padding: 1%;
+  border-radius: 20px;
+  justify-content: space-around;
+  font-size: 15px;
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* *******restaurant******* */
 .restaurant {
-  width: 100%;
-  height: 1000px;
-  border: 2px solid blue;
+  width: 60%;
+  margin: auto;
+  /* height: 1000px; */
+  /* border: 2px solid blue; */
   margin-top: 8%;
 }
+.restaurant>div:nth-child(1){
+  display: flex;
+  font-size: 12px;
+  color: gray;
+  justify-content: space-between;
+}
+.restaurant>div:nth-child(1)>p>strong {
+  font-weight: 500;
+  color: black;
+}
+.restaurant>div:nth-child(1)>i{
+  font-size: 20px;
+  color: black;
+}
+.restaurant>div:nth-child(2){
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2%;
+  border-bottom: 1px solid gray;
+  padding-bottom: 2%;
+}
+.restaurant>div:nth-child(2)>div:nth-child(1){
+  width: 50%;
+}
+.restaurant>div:nth-child(2)>div:nth-child(1)>h3{
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+.restaurant>div:nth-child(2)>div:nth-child(1)>p{
+  font-size: 14px;
+  color: gray;
+}
+.restaurant>div:nth-child(2)>div:nth-child(1)>div {
+  display: flex;
+  margin-top: 8%;
+  font-size: 15px;
+  color: gray;
+}
+.restaurant>div:nth-child(2)>div:nth-child(1)>div>i{
+  margin-right: 3%;
+}
+
+
+
+.rating {
+  display: flex;
+  color: rgb(0, 193, 0);
+  font-size: 15px;
+  font-weight: bold;
+  border-bottom: 1px solid gray;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  padding: 10px 2px 5px 2px;
+}
+.rating>p {
+  font-size: 18px;
+}
+.restaurant>div:nth-child(2)>div:nth-child(2)>button{
+  border: 1px solid rgb(167, 167, 167);
+  border-radius: 8px;
+  background-color: white;
+  width: 65px;
+}
+.restaurant>div:nth-child(2)>div:nth-child(2)>button>div:nth-child(2){
+  font-size: 10px;
+  /* padding: 5px; */
+  padding: 5px 2px 5px 2px;
+}
+.offers {
+  border-bottom: 1px solid gray;
+  padding-bottom: 3%;
+}
+.offers>div {
+  display: flex;
+  margin-top: 2%;
+  width: 100%;
+}
+.offers>div>div{
+  display: flex;
+  /* border: 2px solid; */
+  width: 15%;
+}
+.offers>div>div>h5{
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 8px;
+}
+.offers>div>div:nth-child(1)>i{
+  font-size: 20px;
+}
+.offers>div>div:nth-child(2)>i{
+  border: 2px solid black;
+  font-size: 12px;
+  padding: 1px;
+  width: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+.offers>div:nth-child(2){
+  display: flex;
+  margin-top: 2%;
+}
+.offers>div:nth-child(2)>button{
+  background-color: white;
+  width: 180px;
+  padding: 12px;
+  text-align: left;
+  margin-right: 15px;
+  outline: none;
+  border: 1px solid rgb(194, 194, 194);
+  border-radius: 10px;
+}
+.offers>div:nth-child(2)>button>div{
+  font-weight: bold;
+  font-size: 15px;
+}
+.offers>div:nth-child(2)>button>p{
+  font-weight: bold;
+  font-size: 12px;
+  color: gray;
+}
+.offers>div:nth-child(3){
+  margin-top: 7%;
+}
+.offers>div:nth-child(3)>i {
+  color: green;
+}
+.offers>div:nth-child(3)>p{
+  font-size: 13px;
+  margin-left: 10px;
+  font-weight: 550;
+  color: green;
+}
+/* *********menu******** */
+.recommended {
+  border-bottom: 15px solid rgb(233, 233, 233);
+}
+.recommended>div:nth-child(1)>h3{
+  font-size: 20px;
+  margin-top: 3%;
+}
+.menu {
+  margin-top: 2%;
+  padding-bottom: 5%;
+  border-bottom: 1px solid gray;
+}
+.menu>div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* .menu>div {
+  border: 2px solid red;
+} */
+.menu>div>div:nth-child(1){
+  width: 70%;
+}
+.menu>div>div:nth-child(1)>div>i {
+  font-size: 8px;
+  border: 2px solid green;
+  color: green;
+  padding: 2px;
+}
+.menu>div>div:nth-child(1)>:nth-child(2){
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 1%;
+}
+.menu>div>div:nth-child(1)>:nth-child(3){
+  font-size: 15px;
+  margin-top: 1%;
+}
+.menu>div>div:nth-child(1)>:nth-child(4){
+  font-size: 14px;
+  margin-top: 3%;
+  color: gray;
+}
+.menu>div>div:nth-child(2){
+  width: 15%;
+  height: 95px;
+  text-align: center;
+  overflow: hidden;
+  /* border: 2px solid; */
+  /* padding-right: 20%; */
+  border-radius: 10px;
+}
+.menu>div>div:nth-child(2)>img {
+  width: 100%;
+  height: 100%;
+  scale: 1.2;
+  /* border-radius: 10px; */
+}
+.menu>button {
+  border: 1px solid gray;
+  border-radius: 5px;
+  outline: none;
+  padding: 10px;
+  color: rgb(0, 180, 0);
+  font-weight: bold;
+  font-size: 15px;
+  background-color: white;
+  width: 90px;
+  position: relative;
+  left: 88%;
+  transform: translate(-10%, -90%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.license{
+  background-color: #f1f1f6;
+
+}
+.license>div:nth-child(1){
+  display: flex;
+  align-items: center;
+  color: gray;
+  width: 95%;
+  margin: auto;
+  /* padding-top: 2%; */
+  padding: 2% 0% 2% 0%;
+  border-bottom: 1px solid gray;
+}
+.license>div:nth-child(1)>img {
+  margin-right: 2%;
+  width: 8%;
+}
+.license>div:nth-child(1)>p{
+  font-size: 14px;
+}
+
+.license>div:nth-child(2){
+  align-items: center;
+  color: gray;
+  width: 95%;
+  margin: auto;
+  padding: 2% 0% 2% 0%;
+  font-size: 15px;
+}
+.license>div:nth-child(3){
+  display: flex;
+  align-items: center;
+  color: gray;
+  width: 95%;
+  margin: auto;
+  padding: 2% 0% 10% 0%;
+  font-size: 14px;
+}
+.license>div:nth-child(3)>i {
+  margin-right: 1%;
+}
+
+
+
+
+
+
+
+
 
 /* *****footer**** */
 
@@ -172,4 +464,42 @@
   display: flex;
   justify-content: space-between;
   margin-left: 120px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *********Responsive******** */
+@media screen and (max-width:770px) {
+  .swiggyLogo > div:nth-child(1){
+    width: 20%;
+  }
+  .swiggyLogo > div:nth-child(2) > p {
+    font-size: 10px;
+  }
+  .swiggyLogo > div:nth-child(2) > strong {
+    font-size: 8px;
+  }
+  .search > div > i{
+    font-size: 10px;
+  }
+  .search > div > p{
+    font-size: 10px;
+  }
 }
