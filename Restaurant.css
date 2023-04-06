@@ -224,8 +224,22 @@
   outline: none;
   border: 1px solid rgb(194, 194, 194);
   border-radius: 10px;
+  /* overflow: scroll; */
 }
 .offers>div:nth-child(2)>button>div{
+  display: flex;
+}
+.offers>div:nth-child(2)>button>div>i {
+  font-size: 8px;
+  padding: 5px;
+  width: 19px;
+  border-radius: 15px;
+  margin-right: 5px;
+  color: white;
+  background-color: brown;
+  text-align: center;
+}
+.offers>div:nth-child(2)>button>div>p{
   font-weight: bold;
   font-size: 15px;
 }
