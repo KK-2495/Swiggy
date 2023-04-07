@@ -395,6 +395,8 @@
   }
   .contact{
     flex-direction: column;
+    width: 95%;
+    text-align: center;
   }
   .contact > div > h3{
     margin-bottom: 3%;
