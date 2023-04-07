@@ -177,14 +177,14 @@
 .restaurants>div {
     /* border: 1px solid red; */
     width: 23%;
-    /* height: 380px; */
+    height: 380px;
     margin-bottom: 4%;
     padding-bottom: 2%;
 }
 .restaurants>div:hover {
   border: 1px solid black;
   transition: 0.1s;
-  box-shadow: 0 5px 10px RGB(0,0,0,0.5);
+  box-shadow: 0 5px 10px rgb(0,0,0,0.5);
 }
 .restaurants>div>div:nth-child(1){
     /* border: 1px solid blue; */
@@ -232,11 +232,8 @@
   /* margin-bottom: 4%; */
   align-self: center;
   padding-top: 4%;
-  padding-bottom: 4%;
+  /* padding-bottom: 4%; */
   border-top: 1px solid gray;
-}
-.discount:hover {
-  border-bottom: 1px solid gray;
 }
 .discount>i{
   font-size: 8px;
@@ -254,34 +251,19 @@
 .qView {
   font-weight: bold;
   text-align: center;
+  margin-top: 4%;
   padding: 10px 0px 10px 0px;
+  /* border-top: 1px solid gray; */
   color: rgb(122, 122, 220);
   font-size: 15px;
   display: none;
+  box-shadow: 0 5px 10px RGB(0,0,0,0.5);
+  border-radius: 20px;
 }
-/* .restaurants div:hover + .qView{
+.restaurants div:hover  .qView{
   display: block;
   cursor: pointer;
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 /* *****footer**** */
 
@@ -351,7 +333,7 @@
     padding-bottom: 2%;
     align-items: center;
   }
-  .footerEnd > div {
+  .swiggy {
     width: 25%;
   }
   .swiggy > img {
@@ -359,12 +341,80 @@
   }
   .copyright {
     font-size: 20px;
-    margin-left: 180px;
+    width: 25%;
+  }
+  .connections{
+    width: 15%;
+    /* border: 1px solid white; */
   }
   .connections > div {
-    width: 60%;
     display: flex;
     justify-content: space-between;
-    margin-left: 120px;
   }
-  
+
+  /* ******mediaQuery******** */
+  @media screen and (max-width: 770px) and (min-width: 380px) {
+    .swiggyLogo {
+      width: 40%;
+    }
+    .swiggyLogo>div:nth-child(2)>strong{
+      display: none;
+    }
+    .search {
+      width: 30%;
+    }
+    .search>div:nth-child(even){
+      display: none;
+    }
+    .search>div>p{
+      font-size: 12px;
+    }
+    .search>div>i{
+      font-size: 12px;
+    }
+    .foodSlides{
+      display: none;
+    }
+    .content{
+      margin-top: 13%;
+    }
+    .content>div:nth-child(1)>div:nth-child(1)>h1{
+      font-size: 20px;
+  }
+  .content>div:nth-child(1)>div:nth-child(2){
+    font-size: 10px;
+  }
+  .restaurants{
+    /* flex-wrap: nowrap; */
+    /* flex-direction: column; */
+    border: 1px solid;
+  }
+  .restaurants>div{
+    width: 45%;
+    height: 450px;
+  }
+  .contact{
+    flex-direction: column;
+  }
+  .contact > div > h3{
+    margin-bottom: 3%;
+  }
+  .contact > div > p {
+    margin-top: 1%;
+    font-size: 14px;
+  }
+  .contact > div:nth-child(4) {
+    margin-left: 0%;
+    margin-top: -5%;
+  }
+  .swiggy {
+    width: 20%;
+  }
+  .copyright {
+    font-size: 15px;
+  }
+  .connections{
+    width: 20%;
+    font-size: 12px;
+  }
+  }
