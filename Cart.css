@@ -68,8 +68,9 @@
 /* ******Cart List****** */
 .cart {
   /* background-color: rgb(232, 232, 232); */
-  height: 1500px;
-  padding-top: 120PX;
+  /* height: 1500px; */
+  padding-top: 10%;
+  padding-bottom: 10%;
 }
 .cart>div{
 display: flex;
@@ -166,6 +167,34 @@ margin: auto;
   color: gray;
   /* margin-top: 4%; */
 }
+.paymentMethod>h2{
+  color: gray;
+  margin-top: 5%;
+}
+.payment{
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid black;
+  width: 90%;
+  margin-top: 3%;
+}
+.method{
+  background-color: #d1d1d1;
+  width: 38%;
+}
+.method>div{
+  display: flex;
+}
+.pay{
+  border: 1px solid gray;
+  width: 55%;
+}
+
+
+
+
+
+
 
 
 
