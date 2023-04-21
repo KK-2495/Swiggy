@@ -77,6 +77,7 @@ function login(event) {
       window.location.href = `./HomePage.html`;
     }else{
       alert("Please Register to Login..")
+      window.location.href = `./CreateAcc.html`;
     }
   
     

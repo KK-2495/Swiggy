@@ -16,89 +16,89 @@
     margin: auto;
     margin-top: 10%;
 }
-.login >div:nth-child(1){
+.login form >div:nth-child(1){
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.login >div:nth-child(1)>div:nth-child(1){
+.login form >div:nth-child(1)>div:nth-child(1){
     width: 60%;
 }
-.login >div:nth-child(1)>div:nth-child(1)>h3{
+.login form >div:nth-child(1)>div:nth-child(1)>h3{
     font-size: 35px;
     font-weight: 550;
 }
-.login >div:nth-child(1)>div:nth-child(1)>p{
+.login form >div:nth-child(1)>div:nth-child(1)>p{
     font-size: 15px;
     margin-top: 2%;
 }
-.login >div:nth-child(1)>div:nth-child(1)>p>strong {
+.login form>div:nth-child(1)>div:nth-child(1)>p>strong {
     color: orangered;
 }
-.login >div:nth-child(1)>div:nth-child(2){
+.login form >div:nth-child(1)>div:nth-child(2){
     width: 25%;
 }
-.login >div:nth-child(1)>div:nth-child(2)>img {
+.login form >div:nth-child(1)>div:nth-child(2)>img {
     width: 100%;
 }
-.login>div:nth-child(2){
+.login form >div:nth-child(2){
     border: 1px solid black;
     margin-top: 10%;
     padding: 10px 20px;
 }
-.login>div:nth-child(2)>input {
+.login form>div:nth-child(2)>input {
     border: none;
     outline: none;
     margin-top: 2%;
     font-size: 20px;
     width: 100%
 }
-.login>div:nth-child(3){
+.login form>div:nth-child(3){
     border: 1px solid black;
     margin-top: 1%;
     padding: 10px 20px;
 }
-.login>div:nth-child(3)>input {
+.login form>div:nth-child(3)>input {
     border: none;
     outline: none;
     margin-top: 2%;
     font-size: 20px;
 }
-.login>div:nth-child(4){
+.login form>div:nth-child(4){
     border: 1px solid black;
     margin-top: 1%;
     padding: 10px 20px;
 }
-.login>div:nth-child(4)>input {
+.login form>div:nth-child(4)>input {
     border: none;
     outline: none;
     margin-top: 2%;
     font-size: 20px;
 }
-.login>div:nth-child(5){
+.login form>div:nth-child(5){
     border: 1px solid black;
     margin-top: 1%;
     padding: 10px 20px;
 }
-.login>div:nth-child(5)>input {
+.login form>div:nth-child(5)>input {
     border: none;
     outline: none;
     margin-top: 2%;
     font-size: 20px;
 }
-.login>div:nth-child(6){
+.login form>div:nth-child(6){
     border: 1px solid black;
     margin-top: 1%;
     padding: 10px 20px;
 }
-.login>div:nth-child(6)>input {
+.login form>div:nth-child(6)>input {
     border: none;
     outline: none;
     margin-top: 2%;
     font-size: 20px;
 }
 
-.login>input {
+.login form>input {
     background-color: orangered;
     color: white;
     width: 100%;
@@ -112,7 +112,7 @@
     color: white;
 } */
 
-.login>div:nth-child(4){
+.login form>div:nth-child(4){
     font-size: 15px;
     margin-top: 2%;
 }
