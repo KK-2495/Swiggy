@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="/createacc.css">
+    <title>Register </title>
+    <link rel="stylesheet" href="./createacc.css">
 </head>
 <body>
     <div class="main">
-        <div class="login">
+        <div onsubmit="register(event)" class="login">
+            <form action="">
             <div>
                 <div>
                     <h3>Signup</h3>
@@ -21,21 +22,27 @@
             </div>
             <div>
                 <p>Phone number</p>
-                <input type="number" maxlength="10">
+                <input id="userPhNum" type="text" maxlength="10">
             </div>
             <div>
-                <input type="text" placeholder="Name">
+                <input id="userName" type="text" placeholder="Name">
             </div>
             <div>
-                <input type="email" placeholder="Email">
+                <input id="userEmail" type="email" placeholder="Email">
             </div>
-            <button>
-                <a href="/Login.html">LOGIN</a>  
-            </button>
+            <div>
+                <input id="userPassword" type="password" placeholder="Enter Password">
+            </div>
+            <div>
+                <input id="userConfirmPassword" type="password" placeholder="Confirm your Password">
+            </div>
+            <input type="submit" value="Register">
             <div>
                 By clicking on Login, I accept the Terms & Conditions & Privacy Policy
             </div>
+        </form>
         </div>
     </div>
+    <script src="./userData.js"></script>
 </body>
 </html>

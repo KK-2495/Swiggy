@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="/login.css">
-</head>
-<body>
-    <div class="main">
-        <div class="login">
-            <div>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login Page</title>
+        <link rel="stylesheet" href="/login.css">
+    </head>
+
+    <body>
+        <div class="main">
+            <div class="login">
                 <div>
-                    <h3>Login</h3>
-                    <p>or <strong>Create an account</strong></p>
+                    <div>
+                        <h3>Login</h3>
+                        <p>or <strong>Create an account</strong></p>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/Image-login_btpq7r"
+                            alt="">
+                    </div>
                 </div>
+                <form onsubmit="login(event)" action="">
+                    <div>
+                        <p>Phone number</p>
+                        <input id="userPhNum" type="text" maxlength="10">
+                    </div>
+                    <input type="submit" value="Log In">
+                </form>
                 <div>
-                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/Image-login_btpq7r" alt="">
-                </div>    
-            </div>
-            <div>
-                <p>Phone number</p>
-                <input type="number" maxlength="10">
-            </div>
-            <button>
-                <a href="/startPage.html">LOGIN</a> 
-            </button>
-            <div>
-                By clicking on Login, I accept the Terms & Conditions & Privacy Policy
+                    By clicking on Login, I accept the Terms & Conditions & Privacy Policy
+                </div>
             </div>
         </div>
-    </div>
-</body>
+        <script src="./userData.js"></script>
+    </body>
+
 </html>

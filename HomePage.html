@@ -40,7 +40,7 @@
                     </div>
                     <div>
                         <i class="fa-regular fa-user"></i>
-                        <p>Sign In</p>
+                        <p id="switchUser">Sign In</p>
                     </div>
                     <div>
                         <i class="fa-solid fa-cart-shopping"></i>
@@ -981,6 +981,20 @@
             </div>
 
         </div>
+        <script>
+            window.onload = function () {
+                // alert("alert"); 
+                var activeUser = JSON.parse(localStorage.getItem("swiggyActiveUser"));
+                if(activeUser){
+                    var convertSignIntoName = document.getElementById("switchUser");
+                    var activeSwiggyUserName = `<h2>${activeUser.swiggyUser}</h2>`;
+                    convertSignIntoName.innerHTML = activeSwiggyUserName;
+                    alert(activeUser.swiggyUser);
+                }else{
+                    alert("Login to Continue..")
+                }             
+            }
+        </script>
     </body>
 
 </html>
