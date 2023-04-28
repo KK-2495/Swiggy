@@ -179,11 +179,19 @@ margin: auto;
   margin-top: 3%;
 }
 .method{
-  background-color: #d1d1d1;
+  background-color: #edf1f7;
   width: 38%;
+  padding: 20px;
 }
 .method>div{
   display: flex;
+  padding: 10px;
+  align-items: center;
+  opacity: 0.6;
+}
+.method>div i{
+  font-size: 26px;
+  padding-right: 10px;
 }
 .pay{
   border: 1px solid gray;
