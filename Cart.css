@@ -120,7 +120,7 @@ margin: auto;
 .multiAdd{
   display: flex;
   margin-top: 4%;
-  width: 90%; 
+  width: 95%; 
   justify-content: space-between;
   padding-bottom: 5%;
 }
@@ -174,9 +174,10 @@ margin: auto;
 .payment{
   display: flex;
   justify-content: space-between;
-  border: 2px solid black;
-  width: 90%;
+  /* border: 2px solid black; */
+  width: 95%;
   margin-top: 3%;
+  overflow-y: scroll;
 }
 .method{
   background-color: #edf1f7;
@@ -194,10 +195,26 @@ margin: auto;
   padding-right: 10px;
 }
 .pay{
-  border: 1px solid gray;
   width: 55%;
 }
+.pay>div {
+  border: 1px solid gray;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 30%;
+}
+.pay>div img{
+  width: 10%;
+}
 
+.pay>div p{
+  font-weight: bold;
+}
+.pay>div b{
+  color: rgb(236,97,72);
+}
 
 
 
