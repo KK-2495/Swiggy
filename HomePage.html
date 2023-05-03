@@ -40,12 +40,13 @@
                     </div>
                     <div>
                         <i class="fa-regular fa-user"></i>
-                        <p id="switchUser">Sign In</p>
+                        <p id="switchUser" onclick="window.location.href = `./Login.html`">Sign In</p>
                     </div>
                     <div>
                         <i class="fa-solid fa-cart-shopping"></i>
                         <p>Cart</p>
                     </div>
+                    <div id="logout"></div>
                 </div>
             </div>
             <!-- ******slides***** -->
@@ -987,11 +988,18 @@
                 var activeUser = JSON.parse(localStorage.getItem("swiggyActiveUser"));
                 if(activeUser){
                     var convertSignIntoName = document.getElementById("switchUser");
+                    var logoutSwitch = document.getElementById("logout");
                     var activeSwiggyUserName = `<h2>${activeUser.swiggyUser}</h2>`;
+                    var logout = `<button onclick="logout()">Log Out</button>`;
                     convertSignIntoName.innerHTML = activeSwiggyUserName;
+                    logoutSwitch.innerHTML = logout;
                 }else{
                     alert("Login to Continue..")
                 }             
+            }
+            function logout(){
+                localStorage.removeItem("swiggyActiveUser");
+                window.location.reload();
             }
         </script>
     </body>

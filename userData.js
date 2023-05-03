@@ -73,8 +73,8 @@ function login(event) {
       }
     }if(flagForEmail == true){  
       localStorage.setItem("swiggyActiveUser", JSON.stringify(currentUser));
-      alert("Logged in Successflly... ")
       window.location.href = `./HomePage.html`;
+      alert("Logged in Successflly... ")
     }else{
       alert("Please Register to Login..")
       window.location.href = `./CreateAcc.html`;
