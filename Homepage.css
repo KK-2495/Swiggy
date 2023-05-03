@@ -85,6 +85,13 @@
     font-size: 12px;
     font-weight: bold;
 }
+.logout{
+  background-color: white;
+  padding: 5px;
+  font-weight: bold;
+  border: 1px solid black;
+  outline: none;
+}
 /* ****slides**** */
 .foodSlides {
   background-color: black;

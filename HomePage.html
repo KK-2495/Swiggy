@@ -990,7 +990,7 @@
                     var convertSignIntoName = document.getElementById("switchUser");
                     var logoutSwitch = document.getElementById("logout");
                     var activeSwiggyUserName = `<h2>${activeUser.swiggyUser}</h2>`;
-                    var logout = `<button onclick="logout()">Log Out</button>`;
+                    var logout = `<button class="logout" onclick="logout()">Log Out</button>`;
                     convertSignIntoName.innerHTML = activeSwiggyUserName;
                     logoutSwitch.innerHTML = logout;
                 }else{
