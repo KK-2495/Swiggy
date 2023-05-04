@@ -89,8 +89,8 @@
                     </div>
                 </div>
 
-                <div class="restaurants">
-                    <div>
+                <div class="restaurants" id="productList">
+                    <!-- <div>
                         <div>
                             <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/plgs0tyizbcb2z7vrgqk"
                                 alt="">
@@ -877,7 +877,7 @@
                                 QUICK VIEW
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
             </div>
@@ -995,7 +995,16 @@
                     logoutSwitch.innerHTML = logout;
                 }else{
                     alert("Login to Continue..")
-                }             
+                }      
+                // ********added items****       
+                var displayProducts = document.getElementById("productList");
+            var finalData = "";
+
+            var productsFromSeller = JSON.parse(localStorage.getItem("products"));
+            for(var i=0; i<productsFromSeller.length; i++){
+                finalData += `<div class="proFromJS"><img src=${productsFromSeller[i].proImage} /><h3>${productsFromSeller[i].proName}</h3><p> ${productsFromSeller[i].proPrice}</p></div>`;
+            }
+            displayProducts.innerHTML = finalData;
             }
             function logout(){
                 localStorage.removeItem("swiggyActiveUser");

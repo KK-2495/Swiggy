@@ -188,6 +188,13 @@
     margin-bottom: 4%;
     padding-bottom: 2%;
 }
+.proFromJS{
+  width: 23%;
+  height: 380px;
+}
+.proFromJS>img{
+  width: 100%;
+}
 .restaurants>div:hover {
   border: 1px solid black;
   transition: 0.1s;
