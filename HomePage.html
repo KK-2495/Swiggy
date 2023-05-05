@@ -1002,9 +1002,13 @@
 
             var productsFromSeller = JSON.parse(localStorage.getItem("products"));
             for(var i=0; i<productsFromSeller.length; i++){
-                finalData += `<div class="proFromJS"><img src=${productsFromSeller[i].proImage} /><h3>${productsFromSeller[i].proName}</h3><p> ${productsFromSeller[i].proPrice}</p></div>`;
+                finalData += `<div onclick='redirect(${JSON.stringify(productsFromSeller[i])})' class="proFromJS"><img src=${productsFromSeller[i].proImage} /><h3>${productsFromSeller[i].proName}</h3><p> ${productsFromSeller[i].proPrice}</p></div>`;
             }
             displayProducts.innerHTML = finalData;
+            }
+            function redirect(restaurant){
+                localStorage.setItem("resto",(JSON.stringify(restaurant)));
+                window.location.href = `./Restaurant.html`;
             }
             function logout(){
                 localStorage.removeItem("swiggyActiveUser");
