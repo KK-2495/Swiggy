@@ -44,7 +44,7 @@
                     </div>
                     <div>
                         <i class="fa-solid fa-cart-shopping"></i>
-                        <p>Cart</p>
+                        <p onclick="redirect()">Cart</p>
                     </div>
                 </div>
             </div>
@@ -78,7 +78,7 @@
                     </div>
                 </div>
                 <div class="offers">
-                    <div>
+                    <div id="itemCost">
                         <div>
                             <i class="fa-solid fa-circle-half-stroke"></i>
                             <h5>19 MINS</h5>
@@ -133,7 +133,7 @@
                                     alt="">
                             </div>
                         </div>
-                        <button onclick="addCart()">ADD</button>
+                        <button>ADD</button>
                     </div>
                     <div class="menu">
                         <div>
@@ -522,13 +522,32 @@
                 var restaurant = JSON.parse(localStorage.getItem("resto"));
                 var restoName = document.getElementById("restaurantName");
                 var restoImage = document.getElementById("restaurantImage");
-                var rName = `<h2>${restaurant.proName}</h2>`;
+                var restoPrice = document.getElementById("itemCost");
+                var rName = `<h2>${restaurant.proName}</h2><button onclick='addCart(${JSON.stringify(restaurant)})'><h3>Add to Cart</h3></button>`;
                 var rImage = `<img style="width:80%;" src="${restaurant.proImage}" />`;
+                var itemCost = `<div><h3>₹${restaurant.proPrice}</h3></div>`;
                 restoName.innerHTML = rName;
                 restoImage.innerHTML = rImage;
+                restoPrice.innerHTML = itemCost;
             }
-            function addCart(){
-                alert("Adding to Cart");
+            function addCart(restaurant){
+                // alert("Adding to Cart");
+                var swgUsersData = JSON.parse(localStorage.getItem("swiggyUsers"));
+                var swgCurrentUser = JSON.parse(localStorage.getItem("swiggyActiveUser"));
+                for(var i=0; i<swgUsersData.length; i++){
+                    if(swgCurrentUser.swiggyEmail == swgUsersData[i].swiggyEmail){
+                        if(swgUsersData[i].swiggyResto == undefined){
+                            swgUsersData[i].swiggyResto = [restaurant];
+                        }else {
+                            swgUsersData[i].swiggyResto.push(restaurant);
+                        }
+                        alert("Prouct added Successfully");
+                    }
+                }
+                localStorage.setItem("swiggyUsers",JSON.stringify(swgUsersData));
+            }
+            function redirect(){
+                window.location.href = `./Cart.html`;
             }
         </script>
     </body>

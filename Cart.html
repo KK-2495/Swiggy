@@ -152,7 +152,7 @@
                                     <p>Andheri East</p>
                                 </div>
                             </div>
-                            <div class="itemList">
+                            <div id="itemList" class="itemList">
                                 <div class="item">
                                     <div>
                                         <div>
@@ -222,7 +222,7 @@
                             <div class="totalAmt">
                                 <div>
                                     <h3>TO PAY</h3>
-                                    <h3>₹137</h3>
+                                    <h3  id="itemCost">₹137</h3>
                                 </div>
                             </div>
                         </div>
@@ -347,6 +347,36 @@
 
 
         </div>
+        <script>
+            window.onload = function(){
+                var swgUsersData = JSON.parse(localStorage.getItem("swiggyUsers"));
+                var swgCurrentUser = JSON.parse(localStorage.getItem("swiggyActiveUser"));
+                var itemListDiv = document.getElementById("itemList");
+                var itemCostDiv = document.getElementById("itemCost");
+
+                var cartItemList ;
+                for(var i=0; i<swgUsersData.length; i++){
+                    if(swgCurrentUser.swiggyEmail == swgUsersData[i].swiggyEmail){
+                        cartItemList = swgUsersData[i].swiggyResto;
+                    }
+                }
+                var cartItems = "";
+                for(var i=0; i<cartItemList.length; i++){
+                    cartItems += `<div>
+                        <div class="item"><img src="${cartItemList[i].proImage}" style="width:50px;height:50px"/><div><b>₹${cartItemList[i].proPrice}</b></div></div>
+                        <div class="selectQty">${cartItemList[i].proName}</div>
+                        
+                        </div>`;
+                }
+                itemListDiv.innerHTML = cartItems;
+
+                var sumItemCost = 0;
+                for(var i=0; i<cartItemList.length; i++){
+                    sumItemCost += parseInt(cartItemList[i].proPrice);
+                }
+                itemCostDiv.innerHTML = `₹${sumItemCost}`;
+            }
+        </script>
     </body>
 
 </html>

@@ -7,7 +7,7 @@ function register(event) {
     var email = document.getElementById("userEmail").value;
     var password = document.getElementById("userPassword").value;
     var confirmPassword = document.getElementById("userConfirmPassword").value; 
-    
+    var swiggyResto = [];
 
 
     if(phNum && name && email && password && confirmPassword){
@@ -15,7 +15,7 @@ function register(event) {
           if(password == confirmPassword){
             // console.log(userInfo);
             
-            var userInfo = {swiggyUserPh: phNum, swiggyUser: name, swiggyEmail: email, swiggyPass: password, swiggyConfirmPass: confirmPassword};
+            var userInfo = {swiggyUserPh: phNum, swiggyUser: name, swiggyEmail: email, swiggyPass: password, swiggyConfirmPass: confirmPassword,swiggyResto,};
             var multiUsers = JSON.parse(localStorage.getItem("swiggyUsers")) || [];
             var flagForEmail = false;
             
